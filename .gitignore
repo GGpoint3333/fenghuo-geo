@@ -1,0 +1,35 @@
+# dependencies
+node_modules/
+.pnpm-store/
+# build output
+.next/
+out/
+dist/
+*.tsbuildinfo
+next-env.d.ts.bak
+# secrets
+.env
+.env.local
+.env.*.local
+*.pem
+# runtime data (generated, but tracked for the demo)
+# core/data/latest-report.json is intentionally committed
+# logs / os
+npm-debug.log*
+pnpm-debug.log*
+.DS_Store
+Thumbs.db
+# temp
+_dl/
+__pycache__/
+*.pyc
+# stray locks from alternate package managers (this repo uses pnpm)
+site/package-lock.json
+site/yarn.lock
+npm-shrinkwrap.json
+# npm cache (used only when installing in a restricted sandbox)
+.npm-cache/
+# 本地临时产物（构建日志 / 测试 TAP 快照）
+_build-log.txt
+_after-tap.txt
+_baseline-tap.txt
