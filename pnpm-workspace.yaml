@@ -1,0 +1,12 @@
+packages:
+  - site
+  - core
+
+# pnpm 11 runs an implicit "install before run" check on every `pnpm run`.
+# This monorepo was installed with npm --ignore-scripts in the build sandbox,
+# and every native binary (Tailwind oxide, lightningcss, next-swc, sharp) ships
+# as a prebuilt optional platform package — no dependency build script is
+# needed. Skip the redundant verification so `pnpm build` just runs.
+verifyDepsBeforeRun: false
+# Explicitly acknowledge that no dependency build scripts are required.
+onlyBuiltDependencies: []

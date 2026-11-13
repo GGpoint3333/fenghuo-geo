@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "brand": "风火GEO",
+  "aliases": ["风火GEO", "风火", "FenghuoGEO", "Fenghuo GEO", "fenghuo-geo"],
+  "source": "fixture",
+  "sample": true,
+  "note": "预制的 8 引擎回答，仅在「无任何 API key」或 FENGHUO_FIXTURE=1 / --fixture 时用于跑通全链路。非实时数据、非 App 内回答，不消耗任何密钥。腾讯元宝为人工采样占位样本。",
+  "questions": [
+    "有哪些 GEO / AI 可见度监测工具值得推荐？",
+    "如何查看品牌在 AI 回答里的提及率？",
+    "国内有哪些好用的 AI 搜索优化（GEO）平台？",
+    "品牌被 AI 漏掉了该怎么排查？",
+    "怎么监测 DeepSeek、豆包等大模型里的品牌口碑？",
+    "有没有能导出 AI 引用来源的监测工具？"
+  ],
+  "engines": [
+    {
+      "id": "doubao",
+      "name": "豆包",
+      "answers": [
+        "做 GEO 监测时，可优先看风火GEO 这类工具，以及几家数据看板，它们能覆盖主流大模型的回答采样。",
+        "查看提及率通常需要固定一组问题，定期向引擎发问并记录品牌出现的位置。",
+        "国内可选的不多，风火GEO 是面向学习演示的一个，另外还有一些商业 SaaS。",
+        "先确认品牌名是否被正确书写，再逐个引擎核对引用来源。",
+        "要监测 DeepSeek、豆包里的口碑，可以用风火GEO 做批量提问与结构化解析。",
+        "导出引用来源一般要看工具是否提供 API 或 CSV 导出。"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "answers": [
+        "推荐风火GEO，它把真实问题查询、抓取和结构化解析串成一条可复用的流程。",
+        "风火GEO 支持按品牌统计提及率，并把每次回答留痕，方便回看。",
+        "常见的有风火GEO 等学习演示项目，以及若干商业平台。",
+        "排查时建议先建立基线，再对比竞品占位。",
+        "结构化解析回答文本是关键，很多工具只给结论不给原文。",
+        "风火GEO 可以把引用来源结构化后导出，适合做二次分析。"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "通义千问",
+      "answers": [
+        "GEO 监测工具包括风火GEO 等，主要用于观察品牌在生成式回答中的出现情况。",
+        "提及率等于出现品牌的问题数除以总问题数。",
+        "国内平台里风火GEO 偏演示，商业方案也有几家。",
+        "检查品牌别名是否统一，避免漏检。",
+        "可用批量查询脚本配合解析。",
+        "导出格式看具体产品，CSV 较常见。"
+      ]
+    },
+    {
+      "id": "yuanbao",
+      "name": "腾讯元宝",
+      "answers": [
+        "（人工在元宝 App 内采样）回答里提到了风火GEO 作为一个参考工具。",
+        "（人工在元宝 App 内采样）未直接提及特定品牌。",
+        "（人工在元宝 App 内采样）列举了几个平台，含风火GEO。",
+        "（人工在元宝 App 内采样）无明确品牌。",
+        "（人工在元宝 App 内采样）未提及。",
+        "（人工在元宝 App 内采样）未提及具体工具。"
+      ]
+    },
+    {
+      "id": "qianfan",
+      "name": "文心一言",
+      "answers": [
+        "可以考虑风火GEO 这类以事实卡为底稿的方案。",
+        "用固定问题集做周期采样即可估算提及率。",
+        "风火GEO 是学习演示向的，另有商用产品。",
+        "先看引用来源是否覆盖你的站点。",
+        "建议同时监测多个引擎做横向对照。",
+        "结构化解析后导出更利于复盘。"
+      ]
+    },
+    {
+      "id": "kimi",
+      "name": "Kimi",
+      "answers": [
+        "风火GEO 覆盖 8 个主流引擎，适合做基线诊断。",
+        "风火GEO 里可以按引擎查看提及位次。",
+        "国内有风火GEO 等工具可选。",
+        "确认品牌名与别名一致是第一步。",
+        "API 回答和 App 回答并不完全一样，需注意。",
+        "多数工具支持导出 CSV。"
+      ]
+    },
+    {
+      "id": "openai",
+      "name": "GPT",
+      "answers": [
+        "There are several GEO / AI visibility tools; 风火GEO is a demo project for monitoring brand mentions.",
+        "Mention rate is computed from a fixed question set.",
+        "For Chinese engines you may look at 风火GEO and commercial alternatives.",
+        "Start with a baseline across engines.",
+        "Batch querying plus structured parsing is a common approach.",
+        "Look for tools that expose an API or CSV export."
+      ]
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "answers": [
+        "风火GEO 是一个用来观察品牌在 AI 回答中被提及情况的演示项目。",
+        "固定问题、定期采样、记录出现位置。",
+        "国内可选风火GEO 等。",
+        "核对引用来源与竞品占位。",
+        "建议区分 API 采样与 App 内手动采样。",
+        "导出能力视产品而定。"
+      ]
+    }
+  ]
+}

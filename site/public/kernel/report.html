@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>风火GEO · 全引擎监测报告</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#faf6f0;color:#2b2320;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;font-size:15px}
+a{color:#c23b22}
+.topbar{height:5px;background:#c23b22}
+.hd{background:#1a1210;color:#faf6f0;padding:14px 24px;display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;justify-content:space-between}
+.hd b{font-size:18px;letter-spacing:.5px;color:#c23b22}
+.hd span{font-size:12px;color:#faf6f0;opacity:.85}
+.wrap{max-width:960px;margin:0 auto;padding:28px 20px 40px}
+h1{font-size:26px;margin:0 0 6px;color:#c23b22}
+h2{font-size:18px;margin:30px 0 12px;color:#c23b22;border-left:4px solid #c23b22;padding-left:10px}
+p{margin:6px 0}
+.meta{background:#fff;border:1px solid #efe8e3;border-radius:8px;padding:14px 16px;box-shadow:0 1px 3px rgba(43,35,32,.08)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:14px 0}
+.kpi{background:#fff;border:1px solid #efe8e3;border-radius:8px;padding:12px 14px;box-shadow:0 1px 3px rgba(43,35,32,.08)}
+.kpi .n{font-size:22px;font-weight:700;color:#c23b22}
+.kpi .t{font-size:12px;color:#6b5f58}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #efe8e3;border-radius:8px;overflow:hidden;font-size:14px}
+th,td{padding:9px 10px;text-align:left;border-bottom:1px solid #efe8e3;vertical-align:top;word-break:break-word}
+th{background:#c23b22;color:#fff;font-weight:600;white-space:nowrap}
+tr:last-child td{border-bottom:none}
+.tag{display:inline-block;background:#2f6e5a;color:#fff;border-radius:8px;padding:1px 8px;font-size:12px;margin:1px 3px 1px 0}
+.up{color:#7aa874;font-weight:700}
+.note{font-size:12px;color:#6b5f58;word-break:break-word}
+ul{padding-left:20px;margin:6px 0}
+.card{background:#fff;border:1px solid #efe8e3;border-radius:8px;padding:14px 16px;margin:10px 0;box-shadow:0 1px 3px rgba(43,35,32,.08)}
+.card h3{margin:0 0 6px;font-size:15px;color:#2b2320}
+.ft{background:#1a1210;color:#faf6f0;padding:16px 24px;font-size:12px;text-align:center}
+.ft b{color:#c23b22}
+@media(max-width:600px){.hd{padding:12px 16px}.wrap{padding:20px 14px 30px}h1{font-size:22px}th,td{padding:7px 6px;font-size:13px}}
+</style>
+</head>
+<body>
+<div class="topbar"></div>
+<header class="hd"><b>风火GEO</b><span>由风火GEO生成 · 学习演示 · 全引擎监测报告</span></header>
+<main class="wrap">
+<h1>全引擎监测报告</h1>
+<p class="note">由风火GEO生成 · 学习演示 — 本网站为个人学习演示项目，非商业运营；示例数据并非实时生产数据。</p>
+<div class="meta">
+<p><strong>品牌：</strong>风火GEO　<strong>数据来源：</strong>fixture（示例数据，非实时生产数据）</p>
+<p><strong>生成时间：</strong>2026-11-13T01:03:11.566Z　<strong>站点：</strong><a href="https://fenghuo-geo.example.com">https://fenghuo-geo.example.com</a></p>
+<p><strong>运营主体：</strong>Point（个人独立开发者，学习演示项目）</p>
+</div>
+<div class="grid">
+<div class="kpi"><div class="n">47%</div><div class="t">全局品牌提及率</div></div>
+<div class="kpi"><div class="n">8</div><div class="t">监测引擎总数</div></div>
+<div class="kpi"><div class="n">8</div><div class="t">本轮已采样引擎</div></div>
+<div class="kpi"><div class="n">¥0</div><div class="t">估算已用 / 上限 ¥5</div></div>
+</div>
+<h2>一、预算与覆盖</h2>
+<div class="meta">
+<p>预算上限 ¥5，估算已用 ¥0，未触顶。</p>
+<p>成本为 estimateCostCny 的估算护栏值，非真实账单。已配置密钥 0 / 7，人工采样 1（腾讯元宝），跳过 0，失败 0。</p>
+</div>
+<h2>二、逐引擎结果</h2>
+<table><thead><tr><th>引擎</th><th>模式</th><th>状态</th><th>提及 / 总数</th><th>提及率</th><th>入口</th></tr></thead><tbody>
+<tr><td>豆包</td><td>api</td><td>ok</td><td>4 / 8</td><td class="up">50%</td><td>入口=API（火山方舟 OpenAI 兼容）</td></tr>
+<tr><td>DeepSeek</td><td>api</td><td>ok</td><td>6 / 8</td><td class="up">75%</td><td>入口=API（OpenAI 兼容）</td></tr>
+<tr><td>通义千问</td><td>api</td><td>ok</td><td>3 / 8</td><td class="up">38%</td><td>入口=API（DashScope 兼容模式，开启联网搜索）</td></tr>
+<tr><td>腾讯元宝</td><td>manual</td><td>manual</td><td>3 / 8</td><td class="up">38%</td><td>入口=人工（元宝 App 内手动采样）</td></tr>
+<tr><td>文心一言</td><td>api</td><td>ok</td><td>3 / 8</td><td class="up">38%</td><td>入口=API（千帆 V2 OpenAI 兼容）</td></tr>
+<tr><td>Kimi</td><td>api</td><td>ok</td><td>5 / 8</td><td class="up">63%</td><td>入口=API（Moonshot OpenAI 兼容）</td></tr>
+<tr><td>GPT</td><td>api</td><td>ok</td><td>3 / 8</td><td class="up">38%</td><td>入口=API（OpenAI 官方）</td></tr>
+<tr><td>Gemini</td><td>api</td><td>ok</td><td>3 / 8</td><td class="up">38%</td><td>入口=API（Google OpenAI 兼容端点）</td></tr>
+</tbody></table>
+<h2>三、实现方式与密钥申请</h2>
+<ul>
+<li><strong>豆包</strong>（ok）：上游 cli/geo-probe.mjs 的 doubao 为 model:null，必须先在方舟控制台创建接入点并用 ARK_MODEL 指定其 ID；未指定则跳过。App 内回答不等同 API 回答。 本轮为 fixture 预制回答（非实时、非 App 内回答）。 <span class="note">密钥变量 ARK_API_KEY · <a href="https://console.volcengine.com/ark">https://console.volcengine.com/ark</a></span></li>
+<li><strong>DeepSeek</strong>（ok）：与上游 PROVIDERS.deepseek 对齐；API 回答不登录、不等同 App 内回答。 本轮为 fixture 预制回答（非实时、非 App 内回答）。 <span class="note">密钥变量 DEEPSEEK_API_KEY · <a href="https://platform.deepseek.com/api_keys">https://platform.deepseek.com/api_keys</a></span></li>
+<li><strong>通义千问</strong>（ok）：与上游 PROVIDERS.qwen 对齐，extra.enable_search:true 开启联网；不等同 App 内回答。 本轮为 fixture 预制回答（非实时、非 App 内回答）。 <span class="note">密钥变量 DASHSCOPE_API_KEY · <a href="https://bailian.console.aliyun.com/">https://bailian.console.aliyun.com/</a></span></li>
+<li><strong>腾讯元宝</strong>（manual）：元宝 App 无面向公众的稳定公开 API；上游 geo-doctor 的 hunyuan 只是腾讯混元 API 近似，不等同元宝。未配置 · 需人工在 App 内采样，不读取任何密钥；keyUrl 为 App 官网（非 API）。 本次为 fixture 中的人工采样占位样本；真实运行需人工在元宝 App 内完成。 <span class="note">密钥变量 无 · <a href="https://yuanbao.tencent.com">https://yuanbao.tencent.com</a></span></li>
+<li><strong>文心一言</strong>（ok）：本项目新增（上游 PROVIDERS 无此条目）。模型 ID 以千帆控制台实际可用为准，可用 QIANFAN_MODEL 覆盖；默认取保守值 ernie-3.5-8k。/chat/completions 为 OpenAI 兼容端点。 本轮为 fixture 预制回答（非实时、非 App 内回答）。 <span class="note">密钥变量 QIANFAN_API_KEY · <a href="https://console.bce.baidu.com/qianfan/ais/console/applicationConsole/application">https://console.bce.baidu.com/qianfan/ais/console/applicationConsole/application</a></span></li>
+<li><strong>Kimi</strong>（ok）：与上游 PROVIDERS.kimi 对齐。 本轮为 fixture 预制回答（非实时、非 App 内回答）。 <span class="note">密钥变量 MOONSHOT_API_KEY · <a href="https://platform.moonshot.cn/console/api-keys">https://platform.moonshot.cn/console/api-keys</a></span></li>
+<li><strong>GPT</strong>（ok）：与上游 PROVIDERS.openai 对齐（沿用 gpt-5-mini）。 本轮为 fixture 预制回答（非实时、非 App 内回答）。 <span class="note">密钥变量 OPENAI_API_KEY · <a href="https://platform.openai.com/api-keys">https://platform.openai.com/api-keys</a></span></li>
+<li><strong>Gemini</strong>（ok）：与上游 PROVIDERS.gemini 对齐（OpenAI 兼容端点）。 本轮为 fixture 预制回答（非实时、非 App 内回答）。 <span class="note">密钥变量 GEMINI_API_KEY · <a href="https://aistudio.google.com/apikey">https://aistudio.google.com/apikey</a></span></li>
+</ul>
+<h2>四、缺口（品牌未被提及的题目）</h2>
+<ul>
+<li>[豆包] 如何查看品牌在 AI 回答里的提及率？ — 该回答未出现品牌名或别名</li>
+<li>[豆包] 如何查看品牌在 AI 回答里的提及率？ — 该回答未出现品牌名或别名</li>
+<li>[豆包] 品牌被 AI 漏掉了该怎么排查？ — 该回答未出现品牌名或别名</li>
+<li>[豆包] 有没有能导出 AI 引用来源的监测工具？ — 该回答未出现品牌名或别名</li>
+<li>[DeepSeek] 品牌被 AI 漏掉了该怎么排查？ — 该回答未出现品牌名或别名</li>
+<li>[DeepSeek] 怎么监测 DeepSeek、豆包等大模型里的品牌口碑？ — 该回答未出现品牌名或别名</li>
+<li>[通义千问] 如何查看品牌在 AI 回答里的提及率？ — 该回答未出现品牌名或别名</li>
+<li>[通义千问] 如何查看品牌在 AI 回答里的提及率？ — 该回答未出现品牌名或别名</li>
+<li>[通义千问] 品牌被 AI 漏掉了该怎么排查？ — 该回答未出现品牌名或别名</li>
+<li>[通义千问] 怎么监测 DeepSeek、豆包等大模型里的品牌口碑？ — 该回答未出现品牌名或别名</li>
+<li>[通义千问] 有没有能导出 AI 引用来源的监测工具？ — 该回答未出现品牌名或别名</li>
+<li>[腾讯元宝] 如何查看品牌在 AI 回答里的提及率？ — 该回答未出现品牌名或别名</li>
+<li>[腾讯元宝] 如何查看品牌在 AI 回答里的提及率？ — 该回答未出现品牌名或别名</li>
+<li>[腾讯元宝] 品牌被 AI 漏掉了该怎么排查？ — 该回答未出现品牌名或别名</li>
+<li>[腾讯元宝] 怎么监测 DeepSeek、豆包等大模型里的品牌口碑？ — 该回答未出现品牌名或别名</li>
+<li>[腾讯元宝] 有没有能导出 AI 引用来源的监测工具？ — 该回答未出现品牌名或别名</li>
+</ul>
+<p class="note">其余 18 条见 core/data/latest-report.json。</p>
+<h2>五、案例卡（官网数据源）</h2>
+<div class="card"><h3>某篇行业评测文章被三家引擎反复引用 <span class="up">+47%</span></h3>
+<p class="note">AI 提及率涨幅（示例） · 示例</p>
+<p>把一篇结构清晰、来源可核查的评测文章，放进 AI 回答的引用链路里；四周后观察到品牌在相关问题下的提及明显前移。</p>
+<p><span class="tag">DeepSeek</span><span class="tag">Kimi</span><span class="tag">豆包</span></p></div>
+<div class="card"><h3>一位视频创作者的内容成为回答里的常客 <span class="up">+47%</span></h3>
+<p class="note">AI 提及率涨幅（示例） · 示例</p>
+<p>围绕真实用户提问整理出可引用的要点，发布后被多个引擎在回答中当作背景来源，带动品牌口碑描述趋于稳定。</p>
+<p><span class="tag">通义千问</span><span class="tag">腾讯元宝</span><span class="tag">文心一言</span></p></div>
+<h2>六、采样问题集</h2>
+<ol>
+<li>有哪些 GEO / AI 可见度监测工具值得推荐？</li>
+<li>如何查看品牌在 AI 回答里的提及率？</li>
+<li>国内有哪些好用的 AI 搜索优化（GEO）平台？</li>
+<li>品牌被 AI 漏掉了该怎么排查？</li>
+<li>怎么监测 DeepSeek、豆包等大模型里的品牌口碑？</li>
+<li>有没有能导出 AI 引用来源的监测工具？</li>
+</ol>
+<h2>七、内核产物</h2>
+<ul>
+<li><a href="https://fenghuo-geo.example.com/kernel/llms.txt">llms.txt 索引</a></li>
+<li><a href="https://fenghuo-geo.example.com/kernel/facts.json">facts.json 事实卡</a></li>
+<li><a href="https://fenghuo-geo.example.com/kernel/report.html">report.html 报告页</a></li>
+</ul>
+<p class="note">工作流：实时监测 → 来源洞察 → 循证写作 → 精准发布 → 效果归因。</p>
+</main>
+<footer class="ft"><p><b>由风火GEO生成 · 学习演示</b></p><p>本网站为个人学习演示项目，非商业运营；示例数据并非实时生产数据。</p></footer>
+</body>
+</html>

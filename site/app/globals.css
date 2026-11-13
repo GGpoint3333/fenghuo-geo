@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+/* 显式补充扫描源（Tailwind v4 自动探测之外再加一层保险） */
+@source "../components";
+@source "../lib";
+
+/* ------------------------------------------------------------------ *
+ * 风火GEO 五行风火色板 —— 唯一真源，组件只用语义 token，不再写死色值
+ * ------------------------------------------------------------------ */
+@theme {
+  /* 主色 · 离火 */
+  --color-zhu: #c23b22;          /* 朱砂红：logo / 主 CTA / 高亮数字 / 链接 hover */
+  /* 辅色 · 巽风·木 */
+  --color-dai: #2f6e5a;          /* 黛青：次级按钮 / 标签 */
+  --color-zhuqing: #7aa874;      /* 竹青：正向指标 / 涨幅 */
+  /* 点缀 */
+  --color-jiuzi: #8b2fbe;        /* 九紫：角标 / 品牌渐变端点 */
+  --color-baijin: #d4af37;       /* 八白金：「最受欢迎」角标 / 徽章，小面积 */
+  /* 底色 */
+  --color-cream: #fafafb;        /* 交替底色 #FAFAFB（另一档为白 #FFFFFF） */
+  /* 暖调灰阶 */
+  --color-ink: #2b2320;
+  --color-ink-2: #6b5f58;
+  --color-ink-3: #9c9089;
+  --color-line: #efe8e3;
+  /* 深色场景：仅允许暖玄 + 暖白文字 */
+  --color-warm-dark: #1a1210;    /* 暖玄（火余烬色） */
+  --color-warm-black: #1a1210;   /* 别名：火焰内芯裁切用 */
+  --color-warm-white: #faf6f0;   /* 暖白文字 */
+  --color-warm-text: #faf6f0;    /* 别名：暖白文字 */
+  /* 圆角与阴影 */
+  --radius-brand: 8px;
+  --shadow-brand: 0 1px 3px rgba(43, 35, 32, 0.08);
+}
+
+/* 品牌唯一渐变：朱砂红 → 九紫；禁止跨克渐变 */
+.brand-gradient {
+  background-image: linear-gradient(120deg, #c23b22 0%, #8b2fbe 100%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  color: var(--color-ink);
+  font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB",
+    "Noto Sans CJK SC", system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* sticky 毛玻璃导航下的锚点偏移；#top 由 Hero 持有 */
+section[id],
+[id="top"] {
+  scroll-margin-top: 88px;
+}

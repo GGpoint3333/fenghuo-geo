@@ -1,0 +1,18 @@
+{
+  "name": "fenghuo-geo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "风火GEO · 别让AI漏掉你的品牌 — 官网门面 + GEO Doctor 监测内核（个人学习演示项目）",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node scripts/run-site.mjs dev",
+    "build": "node scripts/run-site.mjs build",
+    "start": "node scripts/run-site.mjs start",
+    "typecheck": "node scripts/run-site.mjs typecheck",
+    "monitor": "node core/scripts/monitor.mjs",
+    "sync": "node core/scripts/sync.mjs",
+    "monitor:sync": "node core/scripts/monitor.mjs && node core/scripts/sync.mjs",
+    "core:test": "node --test core/test/*.test.mjs",
+    "og": "python scripts/make-og.py"
+  }
+}

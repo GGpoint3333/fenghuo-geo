@@ -1,0 +1,35 @@
+{
+  "generatedAt": "2026-11-13T01:03:11.566Z",
+  "sample": true,
+  "source": "fixture",
+  "cases": [
+    {
+      "id": "case-citation-article",
+      "type": "article",
+      "title": "某篇行业评测文章被三家引擎反复引用",
+      "description": "把一篇结构清晰、来源可核查的评测文章，放进 AI 回答的引用链路里；四周后观察到品牌在相关问题下的提及明显前移。",
+      "engineTags": [
+        "DeepSeek",
+        "Kimi",
+        "豆包"
+      ],
+      "lift": "+47%",
+      "liftLabel": "AI 提及率涨幅（示例）",
+      "sample": true
+    },
+    {
+      "id": "case-video-creator",
+      "type": "video",
+      "title": "一位视频创作者的内容成为回答里的常客",
+      "description": "围绕真实用户提问整理出可引用的要点，发布后被多个引擎在回答中当作背景来源，带动品牌口碑描述趋于稳定。",
+      "engineTags": [
+        "通义千问",
+        "腾讯元宝",
+        "文心一言"
+      ],
+      "lift": "+47%",
+      "liftLabel": "AI 提及率涨幅（示例）",
+      "sample": true
+    }
+  ]
+}

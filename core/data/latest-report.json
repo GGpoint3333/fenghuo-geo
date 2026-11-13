@@ -1,0 +1,476 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-13T01:03:11.566Z",
+  "brand": "风火GEO",
+  "source": "fixture",
+  "sample": true,
+  "budget": {
+    "limitCny": 5,
+    "spentCny": 0,
+    "stopped": false
+  },
+  "coverage": {
+    "total": 8,
+    "api": 7,
+    "configured": 0,
+    "sampled": 8,
+    "skipped": 0,
+    "manual": 1,
+    "unconfigured": 0,
+    "errors": 0
+  },
+  "mentionRate": 0.4688,
+  "engines": [
+    {
+      "id": "doubao",
+      "name": "豆包",
+      "mode": "api",
+      "status": "ok",
+      "envKey": "ARK_API_KEY",
+      "keyUrl": "https://console.volcengine.com/ark",
+      "entry": "入口=API（火山方舟 OpenAI 兼容）",
+      "note": "上游 cli/geo-probe.mjs 的 doubao 为 model:null，必须先在方舟控制台创建接入点并用 ARK_MODEL 指定其 ID；未指定则跳过。App 内回答不等同 API 回答。 本轮为 fixture 预制回答（非实时、非 App 内回答）。",
+      "mentionCount": 4,
+      "mentions": [
+        {
+          "question": "有哪些 GEO / AI 可见度监测工具值得推荐？",
+          "alias": "风火GEO"
+        },
+        {
+          "question": "有哪些 GEO / AI 可见度监测工具值得推荐？",
+          "alias": "风火GEO"
+        },
+        {
+          "question": "国内有哪些好用的 AI 搜索优化（GEO）平台？",
+          "alias": "风火GEO"
+        },
+        {
+          "question": "怎么监测 DeepSeek、豆包等大模型里的品牌口碑？",
+          "alias": "风火GEO"
+        }
+      ],
+      "mentionRate": 0.5,
+      "total": 8
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "mode": "api",
+      "status": "ok",
+      "envKey": "DEEPSEEK_API_KEY",
+      "keyUrl": "https://platform.deepseek.com/api_keys",
+      "entry": "入口=API（OpenAI 兼容）",
+      "note": "与上游 PROVIDERS.deepseek 对齐；API 回答不登录、不等同 App 内回答。 本轮为 fixture 预制回答（非实时、非 App 内回答）。",
+      "mentionCount": 6,
+      "mentions": [
+        {
+          "question": "有哪些 GEO / AI 可见度监测工具值得推荐？",
+          "alias": "风火GEO"
+        },
+        {
+          "question": "有哪些 GEO / AI 可见度监测工具值得推荐？",
+          "alias": "风火GEO"
+        },
+        {
+          "question": "如何查看品牌在 AI 回答里的提及率？",
+          "alias": "风火GEO"
+        },
+        {
+          "question": "如何查看品牌在 AI 回答里的提及率？",
+          "alias": "风火GEO"
+        },
+        {
+          "question": "国内有哪些好用的 AI 搜索优化（GEO）平台？",
+          "alias": "风火GEO"
+        },
+        {
+          "question": "有没有能导出 AI 引用来源的监测工具？",
+          "alias": "风火GEO"
+        }
+      ],
+      "mentionRate": 0.75,
+      "total": 8
+    },
+    {
+      "id": "qwen",
+      "name": "通义千问",
+      "mode": "api",
+      "status": "ok",
+      "envKey": "DASHSCOPE_API_KEY",
+      "keyUrl": "https://bailian.console.aliyun.com/",
+      "entry": "入口=API（DashScope 兼容模式，开启联网搜索）",
+      "note": "与上游 PROVIDERS.qwen 对齐，extra.enable_search:true 开启联网；不等同 App 内回答。 本轮为 fixture 预制回答（非实时、非 App 内回答）。",
+      "mentionCount": 3,
+      "mentions": [
+        {
+          "question": "有哪些 GEO / AI 可见度监测工具值得推荐？",
+          "alias": "风火GEO"
+        },
+        {
+          "question": "有哪些 GEO / AI 可见度监测工具值得推荐？",
+          "alias": "风火GEO"
+        },
+        {
+          "question": "国内有哪些好用的 AI 搜索优化（GEO）平台？",
+          "alias": "风火GEO"
+        }
+      ],
+      "mentionRate": 0.375,
+      "total": 8
+    },
+    {
+      "id": "yuanbao",
+      "name": "腾讯元宝",
+      "mode": "manual",
+      "status": "manual",
+      "envKey": null,
+      "keyUrl": "https://yuanbao.tencent.com",
+      "entry": "入口=人工（元宝 App 内手动采样）",
+      "note": "元宝 App 无面向公众的稳定公开 API；上游 geo-doctor 的 hunyuan 只是腾讯混元 API 近似，不等同元宝。未配置 · 需人工在 App 内采样，不读取任何密钥；keyUrl 为 App 官网（非 API）。 本次为 fixture 中的人工采样占位样本；真实运行需人工在元宝 App 内完成。",
+      "mentionCount": 3,
+      "mentions": [
+        {
+          "question": "有哪些 GEO / AI 可见度监测工具值得推荐？",
+          "alias": "风火GEO"
+        },
+        {
+          "question": "有哪些 GEO / AI 可见度监测工具值得推荐？",
+          "alias": "风火GEO"
+        },
+        {
+          "question": "国内有哪些好用的 AI 搜索优化（GEO）平台？",
+          "alias": "风火GEO"
+        }
+      ],
+      "mentionRate": 0.375,
+      "total": 8
+    },
+    {
+      "id": "qianfan",
+      "name": "文心一言",
+      "mode": "api",
+      "status": "ok",
+      "envKey": "QIANFAN_API_KEY",
+      "keyUrl": "https://console.bce.baidu.com/qianfan/ais/console/applicationConsole/application",
+      "entry": "入口=API（千帆 V2 OpenAI 兼容）",
+      "note": "本项目新增（上游 PROVIDERS 无此条目）。模型 ID 以千帆控制台实际可用为准，可用 QIANFAN_MODEL 覆盖；默认取保守值 ernie-3.5-8k。/chat/completions 为 OpenAI 兼容端点。 本轮为 fixture 预制回答（非实时、非 App 内回答）。",
+      "mentionCount": 3,
+      "mentions": [
+        {
+          "question": "有哪些 GEO / AI 可见度监测工具值得推荐？",
+          "alias": "风火GEO"
+        },
+        {
+          "question": "有哪些 GEO / AI 可见度监测工具值得推荐？",
+          "alias": "风火GEO"
+        },
+        {
+          "question": "国内有哪些好用的 AI 搜索优化（GEO）平台？",
+          "alias": "风火GEO"
+        }
+      ],
+      "mentionRate": 0.375,
+      "total": 8
+    },
+    {
+      "id": "kimi",
+      "name": "Kimi",
+      "mode": "api",
+      "status": "ok",
+      "envKey": "MOONSHOT_API_KEY",
+      "keyUrl": "https://platform.moonshot.cn/console/api-keys",
+      "entry": "入口=API（Moonshot OpenAI 兼容）",
+      "note": "与上游 PROVIDERS.kimi 对齐。 本轮为 fixture 预制回答（非实时、非 App 内回答）。",
+      "mentionCount": 5,
+      "mentions": [
+        {
+          "question": "有哪些 GEO / AI 可见度监测工具值得推荐？",
+          "alias": "风火GEO"
+        },
+        {
+          "question": "有哪些 GEO / AI 可见度监测工具值得推荐？",
+          "alias": "风火GEO"
+        },
+        {
+          "question": "如何查看品牌在 AI 回答里的提及率？",
+          "alias": "风火GEO"
+        },
+        {
+          "question": "如何查看品牌在 AI 回答里的提及率？",
+          "alias": "风火GEO"
+        },
+        {
+          "question": "国内有哪些好用的 AI 搜索优化（GEO）平台？",
+          "alias": "风火GEO"
+        }
+      ],
+      "mentionRate": 0.625,
+      "total": 8
+    },
+    {
+      "id": "openai",
+      "name": "GPT",
+      "mode": "api",
+      "status": "ok",
+      "envKey": "OPENAI_API_KEY",
+      "keyUrl": "https://platform.openai.com/api-keys",
+      "entry": "入口=API（OpenAI 官方）",
+      "note": "与上游 PROVIDERS.openai 对齐（沿用 gpt-5-mini）。 本轮为 fixture 预制回答（非实时、非 App 内回答）。",
+      "mentionCount": 3,
+      "mentions": [
+        {
+          "question": "有哪些 GEO / AI 可见度监测工具值得推荐？",
+          "alias": "风火GEO"
+        },
+        {
+          "question": "有哪些 GEO / AI 可见度监测工具值得推荐？",
+          "alias": "风火GEO"
+        },
+        {
+          "question": "国内有哪些好用的 AI 搜索优化（GEO）平台？",
+          "alias": "风火GEO"
+        }
+      ],
+      "mentionRate": 0.375,
+      "total": 8
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "mode": "api",
+      "status": "ok",
+      "envKey": "GEMINI_API_KEY",
+      "keyUrl": "https://aistudio.google.com/apikey",
+      "entry": "入口=API（Google OpenAI 兼容端点）",
+      "note": "与上游 PROVIDERS.gemini 对齐（OpenAI 兼容端点）。 本轮为 fixture 预制回答（非实时、非 App 内回答）。",
+      "mentionCount": 3,
+      "mentions": [
+        {
+          "question": "有哪些 GEO / AI 可见度监测工具值得推荐？",
+          "alias": "风火GEO"
+        },
+        {
+          "question": "有哪些 GEO / AI 可见度监测工具值得推荐？",
+          "alias": "风火GEO"
+        },
+        {
+          "question": "国内有哪些好用的 AI 搜索优化（GEO）平台？",
+          "alias": "风火GEO"
+        }
+      ],
+      "mentionRate": 0.375,
+      "total": 8
+    }
+  ],
+  "gaps": [
+    {
+      "question": "如何查看品牌在 AI 回答里的提及率？",
+      "engine": "豆包",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "如何查看品牌在 AI 回答里的提及率？",
+      "engine": "豆包",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "品牌被 AI 漏掉了该怎么排查？",
+      "engine": "豆包",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "有没有能导出 AI 引用来源的监测工具？",
+      "engine": "豆包",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "品牌被 AI 漏掉了该怎么排查？",
+      "engine": "DeepSeek",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "怎么监测 DeepSeek、豆包等大模型里的品牌口碑？",
+      "engine": "DeepSeek",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "如何查看品牌在 AI 回答里的提及率？",
+      "engine": "通义千问",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "如何查看品牌在 AI 回答里的提及率？",
+      "engine": "通义千问",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "品牌被 AI 漏掉了该怎么排查？",
+      "engine": "通义千问",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "怎么监测 DeepSeek、豆包等大模型里的品牌口碑？",
+      "engine": "通义千问",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "有没有能导出 AI 引用来源的监测工具？",
+      "engine": "通义千问",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "如何查看品牌在 AI 回答里的提及率？",
+      "engine": "腾讯元宝",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "如何查看品牌在 AI 回答里的提及率？",
+      "engine": "腾讯元宝",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "品牌被 AI 漏掉了该怎么排查？",
+      "engine": "腾讯元宝",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "怎么监测 DeepSeek、豆包等大模型里的品牌口碑？",
+      "engine": "腾讯元宝",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "有没有能导出 AI 引用来源的监测工具？",
+      "engine": "腾讯元宝",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "如何查看品牌在 AI 回答里的提及率？",
+      "engine": "文心一言",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "如何查看品牌在 AI 回答里的提及率？",
+      "engine": "文心一言",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "品牌被 AI 漏掉了该怎么排查？",
+      "engine": "文心一言",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "怎么监测 DeepSeek、豆包等大模型里的品牌口碑？",
+      "engine": "文心一言",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "有没有能导出 AI 引用来源的监测工具？",
+      "engine": "文心一言",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "品牌被 AI 漏掉了该怎么排查？",
+      "engine": "Kimi",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "怎么监测 DeepSeek、豆包等大模型里的品牌口碑？",
+      "engine": "Kimi",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "有没有能导出 AI 引用来源的监测工具？",
+      "engine": "Kimi",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "如何查看品牌在 AI 回答里的提及率？",
+      "engine": "GPT",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "如何查看品牌在 AI 回答里的提及率？",
+      "engine": "GPT",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "品牌被 AI 漏掉了该怎么排查？",
+      "engine": "GPT",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "怎么监测 DeepSeek、豆包等大模型里的品牌口碑？",
+      "engine": "GPT",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "有没有能导出 AI 引用来源的监测工具？",
+      "engine": "GPT",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "如何查看品牌在 AI 回答里的提及率？",
+      "engine": "Gemini",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "如何查看品牌在 AI 回答里的提及率？",
+      "engine": "Gemini",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "品牌被 AI 漏掉了该怎么排查？",
+      "engine": "Gemini",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "怎么监测 DeepSeek、豆包等大模型里的品牌口碑？",
+      "engine": "Gemini",
+      "detail": "该回答未出现品牌名或别名"
+    },
+    {
+      "question": "有没有能导出 AI 引用来源的监测工具？",
+      "engine": "Gemini",
+      "detail": "该回答未出现品牌名或别名"
+    }
+  ],
+  "cases": [
+    {
+      "id": "case-citation-article",
+      "type": "article",
+      "title": "某篇行业评测文章被三家引擎反复引用",
+      "description": "把一篇结构清晰、来源可核查的评测文章，放进 AI 回答的引用链路里；四周后观察到品牌在相关问题下的提及明显前移。",
+      "engineTags": [
+        "DeepSeek",
+        "Kimi",
+        "豆包"
+      ],
+      "lift": "+47%",
+      "liftLabel": "AI 提及率涨幅（示例）",
+      "sample": true
+    },
+    {
+      "id": "case-video-creator",
+      "type": "video",
+      "title": "一位视频创作者的内容成为回答里的常客",
+      "description": "围绕真实用户提问整理出可引用的要点，发布后被多个引擎在回答中当作背景来源，带动品牌口碑描述趋于稳定。",
+      "engineTags": [
+        "通义千问",
+        "腾讯元宝",
+        "文心一言"
+      ],
+      "lift": "+47%",
+      "liftLabel": "AI 提及率涨幅（示例）",
+      "sample": true
+    }
+  ],
+  "questions": [
+    "有哪些 GEO / AI 可见度监测工具值得推荐？",
+    "如何查看品牌在 AI 回答里的提及率？",
+    "国内有哪些好用的 AI 搜索优化（GEO）平台？",
+    "品牌被 AI 漏掉了该怎么排查？",
+    "怎么监测 DeepSeek、豆包等大模型里的品牌口碑？",
+    "有没有能导出 AI 引用来源的监测工具？"
+  ],
+  "timestamp": 1794531791567
+}

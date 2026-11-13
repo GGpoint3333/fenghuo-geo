@@ -1,0 +1,77 @@
+name: 风火GEO 每周全引擎监测
+
+# schedule 的 cron 按 UTC 解释：'0 1 * * 1' = 每周一 01:00 UTC
+# 换算为北京时间（Asia/Shanghai, UTC+8）即每周一 09:00。
+on:
+  schedule:
+    - cron: '0 1 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: fenghuo-geo-weekly-monitor
+  cancel-in-progress: false
+
+jobs:
+  weekly-monitor:
+    name: 采样 → 报告 → 同步 → PR
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    # 所有密钥走 secrets；未配置的 secret 解析为空字符串，monitor 会自动跳过该引擎；
+    # 一个密钥都没有时自动读 core/fixtures/*.json 跑 fixture 全链路，workflow 不 fail。
+    env:
+      DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+      ARK_API_KEY: ${{ secrets.ARK_API_KEY }}
+      ARK_MODEL: ${{ secrets.ARK_MODEL }}
+      DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+      MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      QIANFAN_API_KEY: ${{ secrets.QIANFAN_API_KEY }}
+      QIANFAN_MODEL: ${{ secrets.QIANFAN_MODEL }}
+      GEO_BUDGET_CNY: '5'
+      NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL || 'https://fenghuo-geo.example.com' }}
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 准备 Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: 启用 pnpm 10
+        run: npm i -g pnpm@10
+
+      - name: 运行全引擎采样监测（缺密钥自动走 fixture）
+        run: pnpm monitor
+
+      - name: 同步报告到官网数据与内核产物
+        run: pnpm sync
+
+      - name: 以 PR 形式提交监测产物
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: 'chore(monitor): 更新每周全引擎监测产物'
+          title: '风火GEO 每周监测产物更新'
+          body: |
+            由风火GEO生成 · 学习演示
+
+            本周自动采样产物：全引擎报告、人读报告页、官网案例数据、内核事实卡 / llms.txt / 报告页。
+            未配置密钥时数据来自 fixture，为示例数据，非实时生产数据。
+            请人工审阅后再合并；合并即发布到官网。
+
+            本网站为个人学习演示项目，非商业运营。
+          branch: chore/weekly-monitor
+          delete-branch: true
+          add-paths: |
+            core/data/latest-report.json
+            core/data/report.md
+            site/app/data/monitor.json
+            site/public/kernel/llms.txt
+            site/public/kernel/facts.json
+            site/public/kernel/report.html

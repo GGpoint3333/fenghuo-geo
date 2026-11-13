@@ -1,0 +1,19 @@
+# 风火GEO · 监测内核产物 — 由风火GEO生成 · 学习演示
+
+> 本网站为个人学习演示项目，非商业运营；示例数据并非实时生产数据。
+
+- https://fenghuo-geo.example.com/kernel/facts.json — 风火GEO 事实卡：品牌定义、8 大引擎覆盖与本轮提及率
+- https://fenghuo-geo.example.com/kernel/report.html — 全引擎监测报告页（人读，含逐引擎结果与缺口）
+- https://fenghuo-geo.example.com/kernel/llms.txt — 监测内核 llms.txt 产物（本文件，供官网 /llms.txt 合并）
+
+事实卡要点：
+
+- 品牌：风火GEO（Slogan：别让AI漏掉你的品牌）
+- 运营主体：Point（个人独立开发者，学习演示项目）
+- 监测范围：豆包 / DeepSeek / 通义千问 / 腾讯元宝 / 文心一言 / Kimi / GPT / Gemini 共 8 大引擎（腾讯元宝为人工采样）
+- 本轮数据来源：fixture（示例数据，非实时生产数据）
+- 全局提及率：47%；已采样引擎数：8
+- 预算：上限 ¥5 / 估算已用 ¥0
+- 工作流：实时监测 → 来源洞察 → 循证写作 → 精准发布 → 效果归因
+
+由风火GEO生成 · 学习演示
